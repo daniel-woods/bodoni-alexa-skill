@@ -1,0 +1,313 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "reception",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "exit",
+                        "cancel",
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "MeetingIntent",
+                    "slots": [
+                        {
+                            "name": "customer",
+                            "type": "AMAZON.US_FIRST_NAME",
+                            "samples": [
+                                "my name is {customer}",
+                                "i am {customer}",
+                                "this is {customer}",
+                                "i am {customer} and i am from {company}",
+                                "my name is {customer} and i am from {company}",
+                                "my name is {customer} and i work for {company}"
+                            ]
+                        },
+                        {
+                            "name": "employee",
+                            "type": "AMAZON.US_FIRST_NAME",
+                            "samples": [
+                                "my name is {customer}",
+                                "I am currently here to speak with {employee} {employee_last_name} from {department}",
+                                "I am visiting {employee} who works in {department}",
+                                "I am visiting {employee}",
+                                "I am here to visit {employee} who works in {department}",
+                                "I am here to visit {employee}",
+                                "I am here to see {employee} who works in {department}",
+                                "I am here to see {employee}",
+                                "I am meeting with {employee} who works in {department}",
+                                "I am meeting with {employee}"
+                            ]
+                        },
+                        {
+                            "name": "company",
+                            "type": "AMAZON.Corporation",
+                            "samples": [
+                                "I am working for {company}",
+                                "I work for {company}",
+                                "I am from {company}"
+                            ]
+                        },
+                        {
+                            "name": "employee_last_name",
+                            "type": "AMAZON.US_FIRST_NAME",
+                            "samples": [
+                                "{employee}  last name is {employee_last_name}",
+                                "{employee} is from {department} and his last name is {employee_last_name}",
+                                "{employee} works for {department} and their last name is {employee_last_name}",
+                                "{employee} works for {department} and her last name is {employee_last_name}",
+                                "they are from {department} and their last name is {employee_last_name}",
+                                "she is from {department} and her last name is {employee_last_name}",
+                                "he is from {department} and his last name is {employee_last_name}",
+                                "{employee} works for {department} and his last name is {employee_last_name}",
+                                "Their last name is {employee_last_name}",
+                                "Her last name is {employee_last_name}",
+                                "His last name is {employee_last_name}"
+                            ]
+                        },
+                        {
+                            "name": "department",
+                            "type": "WORK_DEPARTMENTS",
+                            "samples": [
+                                "He is from {department}",
+                                "They are from {department}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "my name is {customer}",
+                        "i have a meeting",
+                        "i have a meeting with {employee}",
+                        "i've a meeting with {employee}",
+                        "i'm here to see {employee}",
+                        "i am here to see {employee}",
+                        "i'm looking for {employee}",
+                        "i am looking for {employee}",
+                        "i'm here for {employee}",
+                        "i am here for {employee}",
+                        "my name is {customer} and i'm here to see {employee}",
+                        "my name is {customer} and i'm here to visit {employee}",
+                        "my name is {customer} and i am here to see {employee}",
+                        "my name is {customer} and i am here to visit {employee}",
+                        "my name is {customer} and i have a meeting with {employee}",
+                        "my name is {customer} from {company} and i'm here to see {employee}",
+                        "my name is {customer} from {company} and i'm here to visit {employee}",
+                        "my name is {customer} from {company} and i am here to see {employee}",
+                        "my name is {customer} from {company} and i am here to visit {employee}",
+                        "my name is {customer} from {company} and i have a meeting with {employee}",
+                        "my name is {customer} and i work for company {company}",
+                        "my name is {customer} and i work for {company}",
+                        "my names {customer} and i work for company {company}",
+                        "this is {customer} and i'm here to see {employee}",
+                        "this is {customer} and i'm here to visit {employee}",
+                        "this is {customer} and i am here to see {employee}",
+                        "this is {customer} and i am here to visit {employee}",
+                        "this is {customer} and i have a meeting with {employee}",
+                        "this is {customer} from {company} and i'm here to see {employee}",
+                        "this is {customer} from {company} and i'm here to visit {employee}",
+                        "this is {customer} from {company} and i am here to see {employee}",
+                        "this is {customer} from {company} and i am here to visit {employee}",
+                        "this is {customer} from {company} and i have a meeting with {employee}",
+                        "this is {customer}",
+                        "i am {customer}",
+                        "i am from {company}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "WORK_DEPARTMENTS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "IT",
+                                "synonyms": [
+                                    "it",
+                                    "IT",
+                                    "I.T"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Solutions Architecture",
+                                "synonyms": [
+                                    "solutions architecture",
+                                    "solutions architect",
+                                    "SA"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Premium Support",
+                                "synonyms": [
+                                    "cloud engineering",
+                                    "cloud support engineering",
+                                    "support engineering",
+                                    "premium support",
+                                    "aws premium support"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Education",
+                                "synonyms": [
+                                    "education",
+                                    "edu",
+                                    "universities team",
+                                    "education sa",
+                                    "education solutions architect"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "MeetingIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "customer",
+                            "type": "AMAZON.US_FIRST_NAME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1538628551057.1052503492016"
+                            }
+                        },
+                        {
+                            "name": "employee",
+                            "type": "AMAZON.US_FIRST_NAME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1538628551057.613283916179"
+                            }
+                        },
+                        {
+                            "name": "company",
+                            "type": "AMAZON.Corporation",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1538628551057.1237839243922"
+                            }
+                        },
+                        {
+                            "name": "employee_last_name",
+                            "type": "AMAZON.US_FIRST_NAME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1538628551057.1302600063608"
+                            }
+                        },
+                        {
+                            "name": "department",
+                            "type": "WORK_DEPARTMENTS",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1538628551057.487004994446"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1538628551057.613283916179",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Okay. Do you know who you are meeting with?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Okay. Who are you meeting with?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1538628551057.1237839243922",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Thanks {customer}. Can I also get the company which you are from?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Okay {customer}. And what company do you work for?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1538628551057.1302600063608",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Okay {customer}. Can I get {employee}'s last name and their department?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Thanks {customer}. Do you know {employee}'s last name and which department they work for?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1538628551057.487004994446",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "One more thing, what department des {employee} {employee_last_name} work for?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Finally, what department does {employee} work for?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What department is {employee} from?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1538628551057.1052503492016",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Okay, What's your name and which company are you from?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Sure, What's your name and which company are you from?"
+                    }
+                ]
+            }
+        ]
+    }
+}

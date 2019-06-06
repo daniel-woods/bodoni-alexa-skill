@@ -1,0 +1,54 @@
+{
+  "LaunchRequest": {
+    "en-US": {
+      "welcome": {
+        "title": "Welcome to Bodoni University",
+        "content": "Welcome to Bodoni University. How can I help?",
+        "retry": "How can I help?"
+      }
+    }
+  },
+  "GeneralIntent": {
+    "en-US": {
+      "hello": {
+        "title": "Bodoni University",
+        "content": "This skill can allow you to check into meetings. To do so, please tell me who you have a meeting with.",
+        "reprompt": "To do so, please tell me who you have a meeting with."
+      }
+    }
+  },
+  "FallbackIntent": {
+    "en-US": {
+      "error": {
+        "title": "Bodoni University",
+        "content": "Sorry, I can't help you with that. This skill can allow you to check into meetings. To do so, please tell me who you have a meeting with.",
+        "reprompt": "Please tell me who you have a meeting with."
+      }
+    }
+  },
+  "MeetingIntent": {
+    "en-US": {
+      "intent_fulfilled": {
+        "title": "Meeting",
+        "content": "Okay {customer} from {company}, I've contacted {employee} {employee_last_name} from {department}. Please wait here, as someone will be with you shortly!",
+        "retry": "Okay I think that's everything!"
+      },
+      "retry_error": {
+        "title": "Meeting",
+        "content": "Sorry, I didn't understand that. {repeat_request}"
+      },
+      "err_employee_not_found": {
+        "title": "Meeting",
+        "content": "Sorry, I wasn't able to find an employee called {employee} {employee_last_name}."
+      },
+      "sms": {
+        "text": "ATTENTION: Visitor {customer} ({company}) has checked-in at reception. Please collect them immediately or contact reception."
+      },
+      "ses": {
+        "text": "Hi {employee},\n\n{customer}, from {company} is waiting for you in the reception. Please come and pick your visitor for your meeting.\n\nRegards,\nVirtual Assistant",
+        "from": "Virtual Assistant <xxx@example.com>",
+        "subject": "ALERT - Your guest has arrived!"
+      }
+    }
+  }
+}

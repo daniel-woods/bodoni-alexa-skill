@@ -1,0 +1,171 @@
+{
+  "LaunchRequest": [
+    {
+      "input": {
+        "session": {
+          "new": false,
+          "sessionId": "amzn1.echo-api.session.dfb4b412-3fb7-497f-aba5-142c8149aa24",
+          "application": {
+            "applicationId": "amzn1.ask.skill.bc222dcb-ac4f-472b-9339-553e05108ac0"
+          },
+          "user": {
+            "userId": ""
+          }
+        },
+        "request": {
+          "type": "LaunchRequest",
+          "locale": "en-US",
+          "shouldLinkResultBeReturned": false
+        }
+      },
+      "output": {
+        "outputSpeech": {
+          "type": "SSML",
+          "ssml": "<speak>Welcome to Bodoni University. How can I help?</speak>"
+        },
+        "card": {
+          "type": "Simple",
+          "title": "Welcome to Bodoni University",
+          "content": "Welcome to Bodoni University. How can I help?"
+        },
+        "shouldEndSession": false
+      }
+    }
+  ],
+  "HelpIntent": [
+    {
+      "input": {
+        "session": {
+          "new": false,
+          "sessionId": "amzn1.echo-api.session.dfb4b412-3fb7-497f-aba5-142c8149aa24",
+          "application": {
+            "applicationId": "amzn1.ask.skill.bc222dcb-ac4f-472b-9339-553e05108ac0"
+          },
+          "user": {
+            "userId": ""
+          }
+        },
+        "request": {
+          "type": "IntentRequest",
+          "locale": "en-US",
+          "intent": {
+            "name": "AMAZON.HelpIntent",
+            "confirmationStatus": "NONE"
+          }
+        }
+      },
+      "output": {
+        "outputSpeech": {
+          "type": "SSML",
+          "ssml": "<speak>This skill can allow you to check into meetings. To do so, please tell me who you have a meeting with.</speak>"
+        },
+        "card": {
+          "type": "Simple",
+          "title": "Bodoni University",
+          "content": "This skill can allow you to check into meetings. To do so, please tell me who you have a meeting with."
+        },
+        "reprompt": {
+          "outputSpeech": {
+            "type": "SSML",
+            "ssml": "<speak>This skill can allow you to check into meetings. To do so, please tell me who you have a meeting with.</speak>"
+          }
+        },
+        "shouldEndSession": false
+      }
+    }
+  ],
+  "MeetingIntent": [
+    {
+      "input": {
+        "version": "1.0",
+        "session": {
+          "new": false,
+          "sessionId": "amzn1.echo-api.session.cc0ea0bb-481f-46f9-8be8-254c18dd48fb",
+          "application": {
+            "applicationId": "amzn1.ask.skill.bc222dcb-ac4f-472b-9339-553e05108ac0"
+          },
+          "attributes": {
+            "company": "google",
+            "employee": "sicarius",
+            "last_request": {
+              "card": "Meeting",
+              "speech": "Thanks Dan! Do you know sicarius's last name and which department they are from?"
+            },
+            "customer": "Dan"
+          },
+          "user": {
+            "userId": "amzn1.ask.account.AHCUE5LIBMWMX5JXBWTGHBNDG7WCRLYATYOI43UNSFE2MX3PWY755RKLP3ZI3GBDKLSJJIG7XNTP3U6XSGBUTAFO7AXRAU6BX4X5BRGRLPYBG7VMMNSKMBW3ELA73VQ2P6BXY3NMVAT5WRKU63AC7NXUSXYS3JVVUXPVJXQ5XN7ATTHAVHBN6OEF3P72LFYXAUQ52XDWLFGGHYA"
+          }
+        },
+        "request": {
+          "type": "IntentRequest",
+          "requestId": "amzn1.echo-api.request.9b56b1fd-fff3-435a-82d9-4bf137f90841",
+          "timestamp": "2019-06-03T20:36:56Z",
+          "locale": "en-US",
+          "intent": {
+            "name": "MeetingIntent",
+            "confirmationStatus": "NONE",
+            "slots": {
+              "employee_last_name": {
+                "name": "employee_last_name",
+                "value": "hero",
+                "confirmationStatus": "NONE",
+                "source": "USER"
+              },
+              "company": {
+                "name": "company",
+                "confirmationStatus": "NONE"
+              },
+              "department": {
+                "name": "department",
+                "value": "it",
+                "resolutions": {
+                  "resolutionsPerAuthority": [
+                    {
+                      "authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.bc222dcb-ac4f-472b-9339-553e05108ac0.WORK_DEPARTMENTS",
+                      "status": {
+                        "code": "ER_SUCCESS_MATCH"
+                      },
+                      "values": [
+                        {
+                          "value": {
+                            "name": "IT",
+                            "id": "cd32106bcb6de321930cf34574ea388c"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "confirmationStatus": "NONE",
+                "source": "USER"
+              },
+              "employee": {
+                "name": "employee",
+                "value": "sicarius",
+                "confirmationStatus": "NONE",
+                "source": "USER"
+              },
+              "customer": {
+                "name": "customer",
+                "confirmationStatus": "NONE"
+              }
+            }
+          }
+        }
+      },
+      "output": {
+        "outputSpeech": {
+          "type": "SSML",
+          "ssml": "<speak>Sorry, I wasn't able to find an employee called sicarius hero.</speak>"
+        },
+        "card": {
+          "type": "Simple",
+          "title": "Meeting",
+          "content": "Sorry, I wasn't able to find an employee called sicarius hero."
+        },
+        "shouldEndSession": true
+      }
+    }
+  ]
+}
