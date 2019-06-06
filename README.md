@@ -49,9 +49,6 @@ Setup
         ```
 * Once deployed, the skill should be available from your Alexa Developer account. Head to the [Alexa Skills Development Console](https://developer.amazon.com/alexa/console/ask/) to test.
 
-Cost Analysis
--------------
-
 
 Usage
 ------------------
